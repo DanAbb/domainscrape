@@ -17,8 +17,14 @@ export default async function (request, h) {
     const page = await browser.newPage()
     let word = ''
     let words = []
+    let count = 0
 
     for (let i = 0; i < num; i++) {
+      count++
+      if (count > 30) {
+        await browser.close()
+        return h.response(domains).code(200)
+      }
       for (const p of pattern) {
         word += p === 'v'
           ? letters.vowels[Math.floor(Math.random() * letters.vowels.length)]
