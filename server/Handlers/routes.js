@@ -2,14 +2,12 @@
 
 import LoginRoutes from './Login';
 import SignupRoutes from './Signup';
-import RestaurantRoutes from './Restaurant';
-import BookingRoutes from './Booking';
+import ScrapeRoutes from './Scrape';
 
 const routes = [
   ...LoginRoutes,
   ...SignupRoutes,
-  ...RestaurantRoutes,
-  ...BookingRoutes
+  ...ScrapeRoutes
 ];
 
 export default routes;

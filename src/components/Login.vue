@@ -45,7 +45,7 @@ export default {
         CookieStorage.setUserId(login.data.user._id)
         CookieStorage.setAuthToken(login.data.authToken)
         CookieStorage.setRefreshToken(login.data.refreshToken)
-        this.$router.push({ name: 'AllRestaurants' })
+        this.$router.push({ name: 'Home' })
       } catch (error) {
         console.log(error)
       }

@@ -39,6 +39,7 @@
     "joi": "^13.1.2",
     "jsonwebtoken": "^8.2.0",
     "mongoose": "^5.0.7",
+    "puppeteer": "^1.4.0",
     "shortid": "^2.2.8",
     "vision": "^5.3.1"
   }
