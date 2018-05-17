@@ -26,6 +26,14 @@
       </div>
     </div>
 
+    <div class="suffix-wrapper">
+      <h3>.{{ suffix }}</h3>
+      <button @click="suffix = 'com'">.com</button>
+      <button @click="suffix = 'net'">.net</button>
+      <button @click="suffix = 'me'">.me</button>
+      <button @click="suffix = 'org'">.org</button>
+    </div>
+
     <button
       @click="testShit"
       class="test">
@@ -55,7 +63,8 @@ export default {
       loading: false,
       pattern: '',
       place: 'end',
-      numOfDomains: 1
+      numOfDomains: 1,
+      suffix: 'com'
     }
   },
   methods: {
@@ -65,7 +74,8 @@ export default {
         domain: this.domain,
         pattern: this.pattern.toLowerCase().split(''),
         place: this.place,
-        num: this.numOfDomains
+        num: this.numOfDomains,
+        suffix: this.suffix
       })
 
       this.domains = response.data

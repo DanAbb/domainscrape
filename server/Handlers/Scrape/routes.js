@@ -11,10 +11,11 @@ const routes = [
       tags: ['api'],
       validate: {
         payload: {
-          domain: Joi.string().required(),
+          domain: Joi.string(),
           pattern: Joi.array().required(),
           place: Joi.string().required(),
-          num: Joi.number().required()
+          num: Joi.number().required(),
+          suffix: Joi.string().required()
         }
       }
     }

@@ -9,7 +9,8 @@ export default async function (request, h) {
     domain,
     pattern,
     place,
-    num
+    num,
+    suffix
   } = request.payload
 
   try {
@@ -40,8 +41,8 @@ export default async function (request, h) {
       }
 
       const fullDomain = place === 'end'
-        ? `${domain}${word}.com`
-        : `${word}${domain}.com`
+        ? `${domain}${word}.${suffix}`
+        : `${word}${domain}.${suffix}`
 
       await page.goto(`https://domainr.com/${fullDomain}`)
       await page.waitForSelector('.status')
