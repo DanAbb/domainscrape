@@ -1,6 +1,6 @@
-# tablesystems
+# Domain Scraper
 
-> Table reservation system
+> Scraper for checking domain availability
 
 ## Build Setup
 
